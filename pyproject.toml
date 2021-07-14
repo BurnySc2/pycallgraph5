@@ -1,24 +1,14 @@
 [tool.poetry]
-name = "burny_test_template"
+name = "pycallgraph5"
 version = "0.1.0"
 description = ""
 authors = ["BuRny <gamingburny@gmail.com>"]
 packages = [
-    { include = "burny_test_template/*.py" },
+    { include = "pycallgraph/*.py" },
 ]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-# Numeric python
-numpy = "^1.20.3"
-# Improve performance by writing C or C++ similar code
-cython = "^3.0.0a8"
-# Write and read classes to/from json
-dataclasses-json = "^0.5.4"
-# Network access
-aiohttp = "^3.7.3"
-# Required by aiohttp on windows?
-idna-ssl = "^1.1.0"
 # Simple logger
 loguru = "^0.5.3"
 # Required by loguru on windows?
@@ -26,18 +16,8 @@ aiocontextvars = "^0.2.2"
 atomicwrites = "^1.3.0"
 contextvars = "^2.4"
 win32-setctime = "^1.0.3"
-# Image library
-pillow = "^8.2.0"
-# Better / easier datetime library
-pendulum = "^2.1.2"
-# Easier nested dictionary manipulation
-dpath = "^2.0.1"
-# File watcher
-watchgod = "^0.7"
-# Database with ORM
-SQLAlchemy = "^1.4.20"
-# Simple database that operates on dictionaries
-tinydb = "^4.5.0"
+# Graph network plotting
+pyvis = "^0.1.9"
 
 [tool.poetry.dev-dependencies]
 # Autoformatter
@@ -67,5 +47,5 @@ snakeviz = "^2.1.0"
 pre-commit = "^2.13.0"
 
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["poetry_core>=1.0.0"]
 build-backend = "poetry.masonry.api"
